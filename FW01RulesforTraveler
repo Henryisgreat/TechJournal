@@ -1,0 +1,16 @@
+# set up LAN to WAN rules 
+configure
+set firewall name LAN-WAN default-action drop
+set firewall name LAN-WAN enable-default-log
+set firewall name LAN-WAN rule 1 action accept
+commit 
+save
+
+# set up WAN to LAN rules
+configure
+set firewall name WAN-LAN default-action drop
+set firewall name WAN-LAN enable-default-log
+set firewall name WAN-LAN rule 1 action accept
+commit 
+save
+ 

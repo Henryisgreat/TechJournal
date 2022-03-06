@@ -1,3 +1,6 @@
+#!/bin/vbash
+source /opt/vyatta/etc/functions/script-template
+
 # set up LAN to WAN rules 
 configure
 set firewall name LAN-WAN default-action drop
@@ -13,4 +16,5 @@ set firewall name WAN-LAN enable-default-log
 set firewall name WAN-LAN rule 1 action accept
 commit 
 save
- 
+
+exit

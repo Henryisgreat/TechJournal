@@ -20,13 +20,13 @@ save
 
 # Allow logs from web01 to log server DMZ-LAN
 configure
-set firewall name DMZ-LAN default-action 'drop'
+set firewall name DMZ-LAN default-action drop
 set firewall name DMZ-LAN enable-default-log
-set firewall name DMZ-LAN rule 10 action 'accept'
-set firewall name DMZ-LAN rule 10 destination port '1514'
-set firewall name DMZ-LAN rule 10 protocol 'udp'
-set firewall name DMZ-LAN rule 20 action 'accept'
-set firewall name DMZ-LAN rule 20 state established 'enable'
+set firewall name DMZ-LAN rule 10 action accept
+set firewall name DMZ-LAN rule 10 destination port 1514
+set firewall name DMZ-LAN rule 10 protocol udp
+set firewall name DMZ-LAN rule 20 action accept
+set firewall name DMZ-LAN rule 20 state established enable
 commit
 save
 
